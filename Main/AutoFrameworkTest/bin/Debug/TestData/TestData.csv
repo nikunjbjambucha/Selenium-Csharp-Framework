@@ -1,0 +1,4 @@
+BrowserType,username,password
+Chrome,standard_user,secret_sauce
+FireFox,standard_user,secret_sauce
+Edge,standard_user,secret_sauce

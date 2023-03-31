@@ -1,0 +1,36 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="AutoFrameworkTest" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="AutoFrameworkTest" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="AutoFrameworkTest" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutoFrameworkTest.AutoFrameworkTest.LoginTest1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="LoginTest1" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="AutoFrameworkTest.AutoFrameworkTest.LoginTest2" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="LoginTest2" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
