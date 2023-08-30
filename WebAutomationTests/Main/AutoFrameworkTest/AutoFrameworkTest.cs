@@ -113,6 +113,7 @@ namespace AutoFrameworkTest
                 CurrentPage = GetInstance<LoginPage>();
                 CurrentPage.As<LoginPage>().VerifyHomePageOpned();
                 CurrentPage.As<LoginPage>().Login(testdata.UserName, testdata.Password);
+                CurrentPage.As<LoginPage>().VerifyLoginConfirm();
 
                 test.Log(LogStatus.Pass, "Login test case status", "Passed");
             }

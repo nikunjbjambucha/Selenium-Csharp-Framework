@@ -24,6 +24,12 @@ namespace AutoFrameworkTest.Pages
         [FindsBy(How = How.XPath, Using = ".//input[@type='submit']")]
         IWebElement LoginButton { get; set; }
 
+        [FindsBy(How = How.XPath, Using = ".//button[contains(text(),'Open Menu')]")]
+        IWebElement Navbar { get; set; }
+
+        [FindsBy(How = How.Id, Using = "logout_sidebar_link")]
+        IWebElement LogoutButton { get; set; }
+
         public void VerifyHomePageOpned()
         {
             Thread.Sleep(5000);
@@ -41,6 +47,15 @@ namespace AutoFrameworkTest.Pages
             LoginButton.Click();
             Thread.Sleep(5000);
             test.Log(LogStatus.Pass, "Login", "User has Logged in with user: " + uname);
+        }
+
+        public void VerifyLoginConfirm()
+        {
+            WaitForElement(DriverContext.Driver, Navbar, 20);
+            Navbar.Click();
+            Thread.Sleep(2000);
+            Assert.IsTrue(LogoutButton.Displayed);
+            test.Log(LogStatus.Pass, "Verify User is logged in", "User is logged in verified ");
         }
     }
 }
